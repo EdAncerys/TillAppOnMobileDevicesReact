@@ -30,7 +30,7 @@ export default function DeviceScreen({
       >
         <>{children}</>
       </div>
-      <Button onClick={() => setRotateScreen(!rotateScreen)} />
+      <Button text="Rotate" onClick={() => setRotateScreen(!rotateScreen)} />
     </div>
   );
 }
@@ -40,5 +40,6 @@ const styles = {
     display: 'grid',
     justifyContent: 'center',
     alignItems: 'center',
+    margin: 10,
   },
 };

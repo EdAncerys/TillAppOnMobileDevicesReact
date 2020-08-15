@@ -5,19 +5,24 @@ import colors from '../config/colors';
 export default function FrontPage() {
   return (
     <div style={styles.container}>
-      <div style={{ grodArea: 'b' }}>
+      <div style={{ gridArea: 'a' }}>
+        <DeviceScreen width={375} height={812}>
+          <p>iPhone x</p>
+        </DeviceScreen>
+      </div>
+      <div style={{ gridArea: 'b' }}>
         <DeviceScreen width={375} height={667}>
           <p>iPhone 8</p>
         </DeviceScreen>
       </div>
-      <div style={{ grodArea: 'b' }}>
-        <DeviceScreen width={375} height={667}>
-          <p>iPhone 8</p>
-        </DeviceScreen>
-      </div>
-      <div style={{ grodArea: 'a' }}>
+      <div style={{ gridArea: 'c' }}>
         <DeviceScreen width={320} height={568}>
           <p>iPhone SE</p>
+        </DeviceScreen>
+      </div>
+      <div style={{ gridArea: 'd' }}>
+        <DeviceScreen width={768} height={1024}>
+          <p>iPad</p>
         </DeviceScreen>
       </div>
     </div>
@@ -27,7 +32,8 @@ export default function FrontPage() {
 const styles = {
   container: {
     display: 'grid',
-    gridTemplateAreas: "'a''a''b'",
+    gridTemplateAreas: "'c a b ''d d d'",
     backgroundColor: colors.light,
+    height: '100%',
   },
 };
