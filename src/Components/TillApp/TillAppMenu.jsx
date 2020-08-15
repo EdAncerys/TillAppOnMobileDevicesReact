@@ -4,7 +4,7 @@ import colors from '../../config/colors';
 
 export default function TillAppMenu() {
   return (
-    <div style={StyleSheet.container}>
+    <div style={styles.container}>
       <h1>Menu</h1>
       <div>
         <TillAppMenuButton icon="user" buttonColor={colors.secondary} />
