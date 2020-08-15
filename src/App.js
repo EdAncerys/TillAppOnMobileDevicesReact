@@ -1,9 +1,10 @@
 import React from 'react';
+import FrontPage from './Pages/FrontPage';
 
 export default function App() {
   return (
-    <div>
-      <h1>CSS Grid!</h1>
-    </div>
+    <React.Fragment>
+      <FrontPage />
+    </React.Fragment>
   );
 }
