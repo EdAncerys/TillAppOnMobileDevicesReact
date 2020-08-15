@@ -1,5 +1,5 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import TillAppMenuButton from './TillAppMenuButton';
 import colors from '../../config/colors';
 
 export default function TillAppMenu() {
@@ -7,10 +7,7 @@ export default function TillAppMenu() {
     <div style={StyleSheet.container}>
       <h1>Menu</h1>
       <div>
-        <div>
-          <FontAwesomeIcon icon="check-square" />
-          <FontAwesomeIcon icon="user" size="2x" color={colors.secondary} />
-        </div>
+        <TillAppMenuButton icon="user" buttonColor={colors.secondary} />
       </div>
     </div>
   );
