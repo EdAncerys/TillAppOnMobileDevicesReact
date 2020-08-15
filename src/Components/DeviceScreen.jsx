@@ -1,12 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import colors from '../config/colors';
 import Button from './Button';
+
+const deviceBorder = `5px solid ${colors.black}`;
+const deviceBottom = `45px solid ${colors.black}`;
 
 export default function DeviceScreen({
   children,
   height = '30vh',
   width = '20vw',
 }) {
+  const [rotateScreen, setRotateScreen] = useState(false);
+
   return (
     <div style={styles.container}>
       <div
@@ -14,17 +19,18 @@ export default function DeviceScreen({
           display: 'grid',
           justifyContent: 'center',
           backgroundColor: colors.light,
-          border: `5px solid ${colors.black}`,
-          borderBottom: `35px solid ${colors.black}`,
-          height: height,
-          width: width,
+          border: deviceBorder,
+          borderBottom: rotateScreen ? deviceBorder : deviceBottom,
+          borderRight: rotateScreen ? deviceBottom : deviceBorder,
+          height: rotateScreen ? width : height,
+          width: rotateScreen ? height : width,
           borderRadius: 25,
           margin: 10,
         }}
       >
         <>{children}</>
       </div>
-      <Button />
+      <Button onClick={() => setRotateScreen(!rotateScreen)} />
     </div>
   );
 }

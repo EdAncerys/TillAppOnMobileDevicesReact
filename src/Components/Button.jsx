@@ -1,7 +1,7 @@
 import React from 'react';
 import colors from '../config/colors';
 
-export default function Button({ text = 'Button', width = '100%' }) {
+export default function Button({ text = 'Button', width = '100%', onClick }) {
   return (
     <div
       style={{
@@ -12,6 +12,7 @@ export default function Button({ text = 'Button', width = '100%' }) {
         alignItems: 'center',
         width: width,
       }}
+      onClick={onClick}
     >
       <p style={styles.text}>{text}</p>
     </div>
