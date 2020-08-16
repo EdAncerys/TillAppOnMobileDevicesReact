@@ -2,11 +2,13 @@ import React from 'react';
 import TillAppMenuButton from './TillAppMenuButton';
 import colors from '../../config/colors';
 
-export default function TillAppMenu() {
+export default function TillAppMenu({ totalPrice, setTotalPrice }) {
   return (
-    <div style={styles.container}>
-      <h1>Menu</h1>
-      <div>
+    <div>
+      <div style={styles.menu}>
+        <TillAppMenuButton icon="user" price={1.99} title="Latte" />
+        <TillAppMenuButton icon="user" buttonColor={colors.secondary} />
+        <TillAppMenuButton icon="user" buttonColor={colors.secondary} />
         <TillAppMenuButton icon="user" buttonColor={colors.secondary} />
       </div>
     </div>
@@ -14,7 +16,9 @@ export default function TillAppMenu() {
 }
 
 const styles = {
-  container: {
-    display: 'grid',
+  menu: {
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
   },
 };
