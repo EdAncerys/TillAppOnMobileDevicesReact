@@ -6,11 +6,12 @@ import colors from '../../config/colors';
 
 export default function TillAppMenuButton({
   icon,
-  price = 0.01,
+  price,
   title = 'No Title',
   buttonColor = colors.primary,
   iconColor = colors.white,
-  size = 80,
+  width = 80,
+  height = 80,
 }) {
   const { totalPrice } = useContext(TillAppContext);
 
@@ -18,9 +19,9 @@ export default function TillAppMenuButton({
     <div
       style={{
         display: 'grid',
-        width: size,
-        height: size,
-        borderRadius: size / 4,
+        width: width,
+        height: height,
+        borderRadius: width / 4,
         backgroundColor: buttonColor,
         padding: 5,
         margin: 20,
@@ -59,7 +60,7 @@ export default function TillAppMenuButton({
             margin: 0,
           }}
         >
-          £ {price}
+          {price && `£ ${price}`}
         </p>
       </div>
     </div>
