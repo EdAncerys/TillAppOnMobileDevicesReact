@@ -3,15 +3,21 @@ import colors from '../../config/colors';
 import { TillAppContext } from './TillAppContext';
 
 import TillAppMenu from './TillAppMenu';
+import TillAppSideMenu from './TillAppSideMenu';
 
 export default function AppMenu() {
   const [totalPrice, setTotalPrice] = useState(0);
+  const [selectedItems, setSelectedItems] = useState([]);
 
   return (
-    <TillAppContext.Provider value={{ totalPrice }}>
+    <TillAppContext.Provider
+      value={{ totalPrice, setTotalPrice, selectedItems, setSelectedItems }}
+    >
       <div style={styles.container}>
         <div style={styles.headerMenu}>App Header</div>
-        <div style={styles.leftMenu}>Left Menu {totalPrice.toFixed(2)}</div>
+        <div style={styles.sideMenu}>
+          <TillAppSideMenu />
+        </div>
         <div style={styles.mainMenu}>
           <TillAppMenu />
         </div>
@@ -36,9 +42,8 @@ const styles = {
     gridArea: 'a',
     backgroundColor: colors.primary,
   },
-  leftMenu: {
+  sideMenu: {
     display: 'grid',
-    justifyContent: 'center',
     gridArea: 'b',
     minWidth: '30vw',
     backgroundColor: colors.secondary,

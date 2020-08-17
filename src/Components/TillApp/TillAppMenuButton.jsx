@@ -1,19 +1,25 @@
 import React, { useContext } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { TillAppContext } from './TillAppContext';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import colors from '../../config/colors';
 
 export default function TillAppMenuButton({
   icon,
   price,
-  title = 'No Title',
+  title = 'Title',
   buttonColor = colors.primary,
   iconColor = colors.white,
   width = 80,
   height = 80,
 }) {
-  const { totalPrice } = useContext(TillAppContext);
+  const {
+    totalPrice,
+    setTotalPrice,
+    selectedItems,
+    setSelectedItems,
+  } = useContext(TillAppContext);
 
   return (
     <div
@@ -27,17 +33,22 @@ export default function TillAppMenuButton({
         margin: 20,
         marginRight: 'auto',
         justifyContent: 'center',
-        alignItems: 'center',
       }}
-      onClick={() => console.log(totalPrice)}
+      onClick={() => {
+        if (price) setTotalPrice(totalPrice + price);
+        if (price && title)
+          setSelectedItems([...selectedItems, { title: title, price: price }]);
+        console.log(totalPrice, selectedItems);
+      }}
     >
       <div
         style={{
           display: 'grid',
+          alignItems: 'center',
           justifyItems: 'center',
         }}
       >
-        <FontAwesomeIcon icon={icon} size="2x" color={iconColor} />
+        {icon && <FontAwesomeIcon icon={icon} size="2x" color={iconColor} />}
       </div>
       <div
         style={{
