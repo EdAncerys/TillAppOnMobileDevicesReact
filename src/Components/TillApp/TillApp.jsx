@@ -7,7 +7,9 @@ import TillAppSideMenu from './TillAppSideMenu';
 
 export default function AppMenu() {
   const [totalPrice, setTotalPrice] = useState(0);
-  const [selectedItems, setSelectedItems] = useState([]);
+  const [selectedItems, setSelectedItems] = useState([
+    { title: 'test2', price: '2,44' },
+  ]);
 
   return (
     <TillAppContext.Provider

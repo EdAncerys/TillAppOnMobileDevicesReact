@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 
 import { TillAppContext } from './TillAppContext';
+import TillAppTextPrint from './TillAppTextPrint';
 
 export default function TillAppSideMenu() {
   const { totalPrice, selectedItems } = useContext(TillAppContext);
@@ -8,15 +9,17 @@ export default function TillAppSideMenu() {
   return (
     <div style={styles.container}>
       <div style={styles.header}>
-        <p>Till POS</p>
+        <div>Till POS</div>
       </div>
       <div style={styles.mainMenu}>
         {selectedItems.map((item) => (
-          <div>poop</div>
+          <TillAppTextPrint title={item.title} price={item.price} />
         ))}
       </div>
       <div style={styles.footerMenu}>
-        <p>Price Total: {totalPrice.toFixed(2)}</p>
+        <div style={styles.footerText}>
+          <div>Price Total: {totalPrice.toFixed(2)}</div>
+        </div>
       </div>
     </div>
   );
@@ -26,7 +29,6 @@ const styles = {
   container: {
     display: 'flex',
     flexDirection: 'column',
-    backgroundColor: 'green',
     height: '90vh',
   },
   header: {
@@ -34,18 +36,19 @@ const styles = {
     justifyItems: 'center',
     width: '100%',
     alignSelf: 'start',
-    backgroundColor: 'white',
   },
   mainMenu: {
     marginLeft: 10,
+    marginRight: 10,
     height: 80,
-    backgroundColor: 'red',
     flex: 1,
     overflow: 'scroll',
   },
   footerMenu: {
-    backgroundColor: 'white',
     alignSelf: 'end',
     marginLeft: 'auto',
+  },
+  footerText: {
+    margin: 10,
   },
 };
