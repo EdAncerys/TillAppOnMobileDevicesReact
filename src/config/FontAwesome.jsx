@@ -15,6 +15,13 @@ import {
   faPizzaSlice,
   faCoffee,
   faBone,
+  faGlassMartini,
+  faBeer,
+  faCocktail,
+  faGlassCheers,
+  faGlassWhiskey,
+  faMugHot,
+  faWineBottle,
 } from '@fortawesome/free-solid-svg-icons';
 
 library.add(
@@ -32,5 +39,11 @@ library.add(
   faLemon,
   faPizzaSlice,
   faCoffee,
-  faBone
+  faGlassMartini,
+  faBeer,
+  faCocktail,
+  faGlassCheers,
+  faGlassWhiskey,
+  faMugHot,
+  faWineBottle
 );

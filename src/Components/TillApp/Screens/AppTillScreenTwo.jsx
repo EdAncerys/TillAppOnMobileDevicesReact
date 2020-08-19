@@ -2,63 +2,45 @@ import React from 'react';
 import TillAppMenuButton from '../TillAppMenuButton';
 import colors from '../../../config/colors';
 
-const color = colors.primary;
+const color = colors.secondary;
 
 export default function AppTillScreenOne() {
   return (
     <div style={styles.menu}>
       <TillAppMenuButton
-        icon="coffee"
-        price={1.99}
-        title="Latte"
-        buttonColor={color}
-      />
-      <TillAppMenuButton
-        icon="apple-alt"
-        title="Fruit"
-        price={0.99}
-        buttonColor={color}
-      />
-      <TillAppMenuButton
-        icon="bread-slice"
-        price={4.99}
-        title="Sandwich"
-        buttonColor={color}
-      />
-      <TillAppMenuButton
-        icon="candy-cane"
-        price={1.99}
-        title="Candy"
-        buttonColor={color}
-      />
-      <TillAppMenuButton
-        icon="carrot"
-        price={4.99}
-        title="Carrot"
-        buttonColor={color}
-      />
-      <TillAppMenuButton
-        icon="cheese"
-        price={2.99}
-        title="Cake"
-        buttonColor={color}
-      />
-      <TillAppMenuButton
-        icon="cookie"
-        price={1.99}
-        title="Cookie"
-        buttonColor={color}
-      />
-      <TillAppMenuButton
-        icon="drumstick-bite"
-        price={4.99}
-        title="Chicken"
-        buttonColor={color}
-      />
-      <TillAppMenuButton
-        icon="pizza-slice"
+        icon="beer"
         price={3.99}
-        title="Pizza"
+        title="Beer"
+        buttonColor={color}
+      />
+      <TillAppMenuButton
+        icon="cocktail"
+        title="Cocktail"
+        price={4.99}
+        buttonColor={color}
+      />
+      <TillAppMenuButton
+        icon="glass-cheers"
+        price={6.99}
+        title="Offer"
+        buttonColor={color}
+      />
+      <TillAppMenuButton
+        icon="glass-whiskey"
+        price={4.99}
+        title="Booze"
+        buttonColor={color}
+      />
+      <TillAppMenuButton
+        icon="mug-hot"
+        price={1.99}
+        title="Coffee"
+        buttonColor={color}
+      />
+      <TillAppMenuButton
+        icon="wine-bottle"
+        price={15.99}
+        title="Bottle"
         buttonColor={color}
       />
     </div>

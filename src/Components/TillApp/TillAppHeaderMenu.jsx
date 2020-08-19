@@ -11,7 +11,11 @@ export default function TillAppHeaderMenu() {
         title="Food"
         buttonColor={colors.secondary}
       />
-      <TillAppMenuButton title="Food" buttonColor={colors.secondary} />
+      <TillAppMenuButton
+        title="Drinks"
+        icon="glass-martini"
+        buttonColor={colors.secondary}
+      />
       <TillAppMenuButton title="Category One" buttonColor={colors.secondary} />
     </div>
   );
