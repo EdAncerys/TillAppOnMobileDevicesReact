@@ -4,6 +4,7 @@ import { TillAppContext } from './TillAppContext';
 
 import TillAppMenu from './TillAppMenu';
 import TillAppSideMenu from './TillAppSideMenu';
+import TillAppHeaderMenu from './TillAppHeaderMenu';
 
 export default function AppMenu() {
   const [totalPrice, setTotalPrice] = useState(0);
@@ -16,7 +17,9 @@ export default function AppMenu() {
       value={{ totalPrice, setTotalPrice, selectedItems, setSelectedItems }}
     >
       <div style={styles.container}>
-        <div style={styles.headerMenu}>App Header</div>
+        <div style={styles.headerMenu}>
+          <TillAppHeaderMenu />
+        </div>
         <div style={styles.sideMenu}>
           <TillAppSideMenu />
         </div>
@@ -33,7 +36,7 @@ const styles = {
   container: {
     display: 'grid',
     gridTemplateAreas: "'a a a''b c c''b d d'",
-    gridTemplateRows: '10vh auto 10vh',
+    gridTemplateRows: '15vh auto 10vh',
     width: '100vw',
     height: '100vh',
   },

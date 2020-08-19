@@ -1,24 +1,10 @@
 import React from 'react';
-import TillAppMenuButton from './TillAppMenuButton';
-import colors from '../../config/colors';
+import TillAppScreenOne from './Screens/AppTillScreenOne';
 
-export default function TillAppMenu({ totalPrice, setTotalPrice }) {
+export default function TillAppMenu() {
   return (
     <div>
-      <div style={styles.menu}>
-        <TillAppMenuButton icon="user" price={1.99} title="Latte" />
-        <TillAppMenuButton icon="user" buttonColor={colors.secondary} />
-        <TillAppMenuButton price={1.99} />
-        <TillAppMenuButton buttonColor={colors.secondary} />
-      </div>
+      <TillAppScreenOne />
     </div>
   );
 }
-
-const styles = {
-  menu: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    justifyContent: 'center',
-  },
-};

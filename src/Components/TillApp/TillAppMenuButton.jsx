@@ -63,7 +63,6 @@ export default function TillAppMenuButton({
         backgroundColor: buttonColor,
         padding: 5,
         margin: 20,
-        marginRight: 'auto',
         justifyContent: 'center',
       }}
       onClick={() => handleAddItem()}
@@ -88,6 +87,7 @@ export default function TillAppMenuButton({
             color: iconColor,
             margin: 0,
             textTransform: 'uppercase',
+            textAlign: 'center',
           }}
         >
           {title}
