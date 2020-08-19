@@ -33,7 +33,7 @@ const styles = {
   container: {
     display: 'grid',
     gridTemplateAreas: "'a a a''b c c''b d d'",
-    gridTemplateRows: '10vh auto 15vh',
+    gridTemplateRows: '10vh auto 10vh',
     width: '100vw',
     height: '100vh',
   },

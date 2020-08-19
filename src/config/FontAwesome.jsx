@@ -1,8 +1,8 @@
 import { library } from '@fortawesome/fontawesome-svg-core';
 import {
   faUser,
-  faCheckSquare,
-  faCoffee,
+  faShoppingBasket,
+  faTrashAlt,
 } from '@fortawesome/free-solid-svg-icons';
 
-library.add(faUser, faCheckSquare, faCoffee);
+library.add(faUser, faShoppingBasket, faTrashAlt);

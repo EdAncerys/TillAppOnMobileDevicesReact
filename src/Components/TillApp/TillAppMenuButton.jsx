@@ -37,8 +37,10 @@ export default function TillAppMenuButton({
       onClick={() => {
         if (price) setTotalPrice(totalPrice + price);
         if (price && title)
-          setSelectedItems([...selectedItems, { title: title, price: price }]);
-        console.log(totalPrice, selectedItems);
+          setSelectedItems([
+            ...selectedItems,
+            { title: title, price: price, id: new Date().valueOf() },
+          ]);
       }}
     >
       <div

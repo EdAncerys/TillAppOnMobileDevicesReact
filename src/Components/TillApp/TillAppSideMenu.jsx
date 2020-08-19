@@ -1,7 +1,11 @@
 import React, { useContext } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { TillAppContext } from './TillAppContext';
 import TillAppTextPrint from './TillAppTextPrint';
+import colors from '../../config/colors';
+
+const color = colors.white;
 
 export default function TillAppSideMenu() {
   const { totalPrice, selectedItems } = useContext(TillAppContext);
@@ -9,11 +13,16 @@ export default function TillAppSideMenu() {
   return (
     <div style={styles.container}>
       <div style={styles.header}>
-        <div>Till POS</div>
+        <FontAwesomeIcon icon="shopping-basket" size="2x" color={color} />
       </div>
       <div style={styles.mainMenu}>
         {selectedItems.map((item) => (
-          <TillAppTextPrint title={item.title} price={item.price} />
+          <TillAppTextPrint
+            title={item.title}
+            price={item.price}
+            id={item.id}
+            color={color}
+          />
         ))}
       </div>
       <div style={styles.footerMenu}>
