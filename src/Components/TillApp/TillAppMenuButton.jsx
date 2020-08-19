@@ -27,7 +27,7 @@ export default function TillAppMenuButton({
   };
 
   const handleQuantity = () => {
-    const result = selectedItems.map((item) => {
+    selectedItems.map((item) => {
       if (item.title === title) item.quantity += 1;
     });
   };

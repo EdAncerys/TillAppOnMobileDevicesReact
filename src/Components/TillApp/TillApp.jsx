@@ -1,4 +1,4 @@
-import React, { useState, createContext } from 'react';
+import React, { useState } from 'react';
 import colors from '../../config/colors';
 import { TillAppContext } from './TillAppContext';
 
@@ -8,7 +8,7 @@ import TillAppSideMenu from './TillAppSideMenu';
 export default function AppMenu() {
   const [totalPrice, setTotalPrice] = useState(0);
   const [selectedItems, setSelectedItems] = useState([
-    { title: 'test2', price: '2,44' },
+    { title: 'test2', quantity: 1, price: '2,44' },
   ]);
 
   return (

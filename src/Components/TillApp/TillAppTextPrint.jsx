@@ -24,7 +24,7 @@ export default function TillAppTextPrint({
       <div style={{ ...styles.text, ...{ flex: 1, color: color } }}>
         {title}
       </div>
-      <div style={{ ...styles.text, ...{ color: color } }}>{quantity}</div>
+      <div style={{ ...styles.quantity, ...{ color: color } }}>{quantity}</div>
       <div style={{ ...styles.text, ...{ color: color } }}>£{price}</div>
       <FontAwesomeIcon
         style={styles.icon}
@@ -39,7 +39,7 @@ export default function TillAppTextPrint({
 const styles = {
   container: {
     display: 'flex',
-    padding: 0,
+    alignItems: 'center',
     marginTop: 10,
   },
   text: {
@@ -48,5 +48,15 @@ const styles = {
   },
   icon: {
     marginLeft: 10,
+  },
+  quantity: {
+    display: 'grid',
+    width: 30,
+    height: 30,
+    borderRadius: '50%',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: colors.danger,
+    marginRight: 10,
   },
 };
