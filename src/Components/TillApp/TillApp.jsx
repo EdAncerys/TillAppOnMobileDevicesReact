@@ -8,13 +8,25 @@ import TillAppHeaderMenu from './TillAppHeaderMenu';
 
 export default function AppMenu() {
   const [totalPrice, setTotalPrice] = useState(0);
-  const [selectedItems, setSelectedItems] = useState([
-    { title: 'test2', quantity: 1, price: '2,44' },
-  ]);
+  const [selectedItems, setSelectedItems] = useState([]);
+  const [screenOne, setScreenOne] = useState(true);
+  const [screenTwo, setScreenTwo] = useState(false);
+  const [screenThree, setScreenThree] = useState(false);
 
   return (
     <TillAppContext.Provider
-      value={{ totalPrice, setTotalPrice, selectedItems, setSelectedItems }}
+      value={{
+        totalPrice,
+        setTotalPrice,
+        selectedItems,
+        setSelectedItems,
+        screenOne,
+        setScreenOne,
+        screenTwo,
+        setScreenTwo,
+        screenThree,
+        setScreenThree,
+      }}
     >
       <div style={styles.container}>
         <div style={styles.headerMenu}>
