@@ -22,6 +22,13 @@ import {
   faGlassWhiskey,
   faMugHot,
   faWineBottle,
+  faHatCowboy,
+  faUserTie,
+  faTshirt,
+  faSocks,
+  faShoePrints,
+  faMitten,
+  faHatWizard,
 } from '@fortawesome/free-solid-svg-icons';
 
 library.add(
@@ -45,5 +52,12 @@ library.add(
   faGlassCheers,
   faGlassWhiskey,
   faMugHot,
-  faWineBottle
+  faWineBottle,
+  faHatCowboy,
+  faUserTie,
+  faTshirt,
+  faSocks,
+  faShoePrints,
+  faMitten,
+  faHatWizard
 );
