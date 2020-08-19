@@ -1,22 +1,26 @@
-import React from 'react';
-import colors from '../../config/colors';
-import TillAppMenuButton from './TillAppMenuButton';
+import React, { useState, useContext } from 'react';
+import { TillAppContext } from './TillAppContext';
 import Button from '../Button';
 
 export default function TillAppFooterMenu() {
+  const { setPrintReceipt } = useContext(TillAppContext);
+
+  const handlePrint = () => {
+    setPrintReceipt(true);
+    setTimeout(() => {
+      setPrintReceipt(false);
+    }, 2000);
+  };
+
   return (
-    <div style={styles.container}>
-      <Button />
-      {/* <TillAppMenuButton title="Print Receipt" height={50} width={180} /> */}
+    <div style={styles.container} onClick={() => handlePrint()}>
+      <Button title="Print Receipt" />
     </div>
   );
 }
 
 const styles = {
   container: {
-    color: colors.white,
-    fontSize: 20,
-    fontWeight: 600,
-    border: 'white',
+    width: '60vw',
   },
 };

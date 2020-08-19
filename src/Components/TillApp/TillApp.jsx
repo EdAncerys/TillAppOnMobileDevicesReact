@@ -10,6 +10,7 @@ import TillAppFooterMenu from './TillAppFooterMenu';
 export default function AppMenu() {
   const [totalPrice, setTotalPrice] = useState(0);
   const [selectedItems, setSelectedItems] = useState([]);
+  const [printReceipt, setPrintReceipt] = useState(false);
   const [screenOne, setScreenOne] = useState(true);
   const [screenTwo, setScreenTwo] = useState(false);
   const [screenThree, setScreenThree] = useState(false);
@@ -27,6 +28,7 @@ export default function AppMenu() {
         setScreenTwo,
         screenThree,
         setScreenThree,
+        setPrintReceipt,
       }}
     >
       <div style={styles.container}>

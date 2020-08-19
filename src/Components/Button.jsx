@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import colors from '../config/colors';
 
-export default function Button({ text = 'Button', width = '100%', onClick }) {
+export default function Button({ title = 'Button', width = '100%', onClick }) {
   const [hover, setHover] = useState(false);
 
   return (
@@ -19,7 +19,7 @@ export default function Button({ text = 'Button', width = '100%', onClick }) {
       onMouseEnter={() => setHover(!hover)}
       onMouseLeave={() => setHover(!hover)}
     >
-      <p style={styles.text}>{text}</p>
+      <p style={styles.text}>{title}</p>
     </div>
   );
 }
