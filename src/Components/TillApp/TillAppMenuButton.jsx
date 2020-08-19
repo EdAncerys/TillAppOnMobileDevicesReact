@@ -21,6 +21,38 @@ export default function TillAppMenuButton({
     setSelectedItems,
   } = useContext(TillAppContext);
 
+  const handleDuplicate = () => {
+    const duplicate = selectedItems.filter((item) => item.title !== title);
+    if (selectedItems.length === duplicate.length) return true;
+  };
+
+  const handleQuantity = () => {
+    const result = selectedItems.map((item) => {
+      if (item.title === title) item.quantity += 1;
+    });
+  };
+
+  const addItem = () => {
+    if (handleDuplicate()) {
+      setSelectedItems([
+        ...selectedItems,
+        {
+          title: title,
+          price: price,
+          quantity: 1,
+          id: new Date().valueOf(),
+        },
+      ]);
+    } else {
+      handleQuantity();
+    }
+  };
+
+  const handleAddItem = () => {
+    if (price) setTotalPrice(totalPrice + price);
+    if (price && title) addItem();
+  };
+
   return (
     <div
       style={{
@@ -34,14 +66,7 @@ export default function TillAppMenuButton({
         marginRight: 'auto',
         justifyContent: 'center',
       }}
-      onClick={() => {
-        if (price) setTotalPrice(totalPrice + price);
-        if (price && title)
-          setSelectedItems([
-            ...selectedItems,
-            { title: title, price: price, id: new Date().valueOf() },
-          ]);
-      }}
+      onClick={() => handleAddItem()}
     >
       <div
         style={{

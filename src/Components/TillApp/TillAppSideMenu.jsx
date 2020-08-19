@@ -19,6 +19,7 @@ export default function TillAppSideMenu() {
         {selectedItems.map((item) => (
           <TillAppTextPrint
             title={item.title}
+            quantity={item.quantity}
             price={item.price}
             id={item.id}
             color={color}
@@ -27,7 +28,7 @@ export default function TillAppSideMenu() {
       </div>
       <div style={styles.footerMenu}>
         <div style={styles.footerText}>
-          <div>Price Total: {totalPrice.toFixed(2)}</div>
+          <div>Price Total: £{totalPrice.toFixed(2)}</div>
         </div>
       </div>
     </div>
@@ -45,6 +46,7 @@ const styles = {
     justifyItems: 'center',
     width: '100%',
     alignSelf: 'start',
+    margin: 10,
   },
   mainMenu: {
     marginLeft: 10,
@@ -58,6 +60,10 @@ const styles = {
     marginLeft: 'auto',
   },
   footerText: {
+    color: color,
+    fontSize: 20,
+    fontWeight: 600,
     margin: 10,
+    marginLeft: 20,
   },
 };

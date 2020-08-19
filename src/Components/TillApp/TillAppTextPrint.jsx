@@ -7,6 +7,7 @@ import colors from '../../config/colors';
 
 export default function TillAppTextPrint({
   title,
+  quantity,
   price,
   id,
   color = colors.dark,
@@ -23,6 +24,7 @@ export default function TillAppTextPrint({
       <div style={{ ...styles.text, ...{ flex: 1, color: color } }}>
         {title}
       </div>
+      <div style={{ ...styles.text, ...{ color: color } }}>{quantity}</div>
       <div style={{ ...styles.text, ...{ color: color } }}>£{price}</div>
       <FontAwesomeIcon
         style={styles.icon}
