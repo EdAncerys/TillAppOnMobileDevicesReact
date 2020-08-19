@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { TillAppContext } from './TillAppContext';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -20,6 +20,7 @@ export default function TillAppMenuButton({
     selectedItems,
     setSelectedItems,
   } = useContext(TillAppContext);
+  const [hover, setHover] = useState(false);
 
   const handleDuplicate = () => {
     const duplicate = selectedItems.filter((item) => item.title !== title);
@@ -56,16 +57,19 @@ export default function TillAppMenuButton({
   return (
     <div
       style={{
+        cursor: hover ? 'pointer' : '',
         display: 'grid',
         width: width,
         height: height,
         borderRadius: width / 4,
-        backgroundColor: buttonColor,
+        backgroundColor: hover ? colors.medium : buttonColor,
         padding: 5,
         margin: 20,
         justifyContent: 'center',
       }}
       onClick={() => handleAddItem()}
+      onMouseEnter={() => setHover(!hover)}
+      onMouseLeave={() => setHover(!hover)}
     >
       <div
         style={{

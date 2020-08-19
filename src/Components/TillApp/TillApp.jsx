@@ -5,6 +5,7 @@ import { TillAppContext } from './TillAppContext';
 import TillAppMenu from './TillAppMenu';
 import TillAppSideMenu from './TillAppSideMenu';
 import TillAppHeaderMenu from './TillAppHeaderMenu';
+import TillAppFooterMenu from './TillAppFooterMenu';
 
 export default function AppMenu() {
   const [totalPrice, setTotalPrice] = useState(0);
@@ -38,7 +39,9 @@ export default function AppMenu() {
         <div style={styles.mainMenu}>
           <TillAppMenu />
         </div>
-        <div style={styles.footerMenu}>Footer Menu</div>
+        <div style={styles.footerMenu}>
+          <TillAppFooterMenu />
+        </div>
       </div>
     </TillAppContext.Provider>
   );

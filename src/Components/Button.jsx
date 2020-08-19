@@ -3,6 +3,7 @@ import colors from '../config/colors';
 
 export default function Button({ text = 'Button', width = '100%', onClick }) {
   const [hover, setHover] = useState(false);
+
   return (
     <div
       style={{
