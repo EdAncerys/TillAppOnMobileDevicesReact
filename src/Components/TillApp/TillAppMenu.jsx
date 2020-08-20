@@ -18,7 +18,8 @@ export default function TillAppMenu() {
 
 const styles = {
   container: {
-    height: '75vh',
+    height: 'auto',
+    flex: 1,
     overflow: 'scroll',
   },
 };

@@ -56,9 +56,10 @@ const styles = {
   container: {
     display: 'grid',
     gridTemplateAreas: "'a a a''b c c''b d d'",
-    gridTemplateRows: 'auto auto auto',
-    width: '100vw',
-    height: '100vh',
+    gridTemplateRows: '150px auto 100px',
+    width: '100%',
+    height: '100%',
+    overflow: 'scroll',
   },
   headerMenu: {
     display: 'grid',

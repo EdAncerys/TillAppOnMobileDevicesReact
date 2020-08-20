@@ -7,11 +7,11 @@ import colors from '../../config/colors';
 
 const color = colors.white;
 
-export default function TillAppSideMenu() {
+export default function TillAppSideMenu({ height = '95%' }) {
   const { totalPrice, selectedItems } = useContext(TillAppContext);
 
   return (
-    <div style={styles.container}>
+    <div style={{ ...styles.container, ...{ maxHeight: height } }}>
       <div style={styles.header}>
         <FontAwesomeIcon icon="shopping-basket" size="2x" color={color} />
       </div>
@@ -40,7 +40,6 @@ const styles = {
   container: {
     display: 'flex',
     flexDirection: 'column',
-    maxHeight: '85vh',
   },
   header: {
     display: 'grid',
@@ -57,7 +56,6 @@ const styles = {
     overflow: 'scroll',
   },
   footerMenu: {
-    alignSelf: 'end',
     marginLeft: 'auto',
   },
   footerText: {

@@ -1,13 +1,15 @@
 import React from 'react';
 import DeviceScreen from '../Components/DeviceScreen';
+import TillApp from '../Components/TillApp/TillApp';
+
 import colors from '../config/colors';
 
 export default function FrontPage() {
   return (
     <div style={styles.container}>
       <div style={{ gridArea: 'a' }}>
-        <DeviceScreen width={375} height={812}>
-          <p>iPhone x</p>
+        <DeviceScreen width={375} height={812} title="iPhone x">
+          <TillApp />
         </DeviceScreen>
       </div>
       <div style={{ gridArea: 'b' }}>
