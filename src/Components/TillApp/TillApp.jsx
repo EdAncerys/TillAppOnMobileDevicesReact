@@ -72,7 +72,6 @@ const styles = {
   sideMenu: {
     display: 'grid',
     gridArea: 'b',
-    minWidth: '30vw',
     backgroundColor: colors.secondary,
   },
   mainMenu: {
@@ -86,7 +85,6 @@ const styles = {
     justifyContent: 'center',
     alignItems: 'center',
     gridArea: 'd',
-    maxHeight: '10vh',
     backgroundColor: colors.medium,
   },
 };

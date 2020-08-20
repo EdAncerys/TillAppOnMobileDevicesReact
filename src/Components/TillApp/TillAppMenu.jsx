@@ -8,10 +8,17 @@ export default function TillAppMenu() {
   const { screenOne, screenTwo, screenThree } = useContext(TillAppContext);
 
   return (
-    <div>
+    <div style={styles.container}>
       {screenOne && <TillAppScreenOne />}
       {screenTwo && <TillAppScreenTwo />}
       {screenThree && <TillAppScreenThree />}
     </div>
   );
 }
+
+const styles = {
+  container: {
+    height: '75vh',
+    overflow: 'scroll',
+  },
+};

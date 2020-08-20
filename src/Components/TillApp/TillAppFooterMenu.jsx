@@ -22,5 +22,6 @@ export default function TillAppFooterMenu() {
 const styles = {
   container: {
     width: '60vw',
+    padding: 10,
   },
 };
