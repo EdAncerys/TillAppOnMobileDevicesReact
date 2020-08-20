@@ -39,7 +39,7 @@ const styles = {
   container: {
     display: 'flex',
     flexDirection: 'column',
-    height: '90vh',
+    maxHeight: '90vh',
   },
   header: {
     display: 'grid',

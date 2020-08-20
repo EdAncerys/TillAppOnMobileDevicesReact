@@ -6,10 +6,13 @@ import TillAppMenu from './TillAppMenu';
 import TillAppSideMenu from './TillAppSideMenu';
 import TillAppHeaderMenu from './TillAppHeaderMenu';
 import TillAppFooterMenu from './TillAppFooterMenu';
+import PrintReceiptScreen from './Screens/PrintReceiptScreen';
 
 export default function AppMenu() {
   const [totalPrice, setTotalPrice] = useState(0);
-  const [selectedItems, setSelectedItems] = useState([]);
+  const [selectedItems, setSelectedItems] = useState([
+    { title: 'Latte', quantity: 1, price: 2 },
+  ]);
   const [printReceipt, setPrintReceipt] = useState(false);
   const [screenOne, setScreenOne] = useState(true);
   const [screenTwo, setScreenTwo] = useState(false);
@@ -31,6 +34,8 @@ export default function AppMenu() {
         setPrintReceipt,
       }}
     >
+      {printReceipt && <PrintReceiptScreen />}
+
       <div style={styles.container}>
         <div style={styles.headerMenu}>
           <TillAppHeaderMenu />
@@ -53,7 +58,7 @@ const styles = {
   container: {
     display: 'grid',
     gridTemplateAreas: "'a a a''b c c''b d d'",
-    gridTemplateRows: '15vh auto 10vh',
+    gridTemplateRows: 'auto auto auto',
     width: '100vw',
     height: '100vh',
   },
@@ -81,6 +86,7 @@ const styles = {
     justifyContent: 'center',
     alignItems: 'center',
     gridArea: 'd',
+    maxHeight: '10vh',
     backgroundColor: colors.medium,
   },
 };
