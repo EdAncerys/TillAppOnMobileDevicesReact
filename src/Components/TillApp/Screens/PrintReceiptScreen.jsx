@@ -9,22 +9,20 @@ export default function PrintReceiptScreen() {
     <div>
       <div style={styles.backGround}> </div>
       <div style={styles.container}>
-        <div style={styles.receipt}>
-          <div style={styles.header}>Receipt</div>
-          <div style={styles.wrapper}>
-            {selectedItems.map((item) => (
-              <div style={styles.itemList} key={item.id}>
-                <div style={styles.list}>{item.title}</div>
-                <div style={{ ...styles.list, ...{ flex: 1 } }}>
-                  x {item.quantity}
-                </div>
-                <div style={styles.list}>£{item.price}</div>
+        <div style={styles.header}>Receipt</div>
+        <div style={styles.wrapper}>
+          {selectedItems.map((item) => (
+            <div style={styles.itemList} key={item.id}>
+              <div style={styles.list}>{item.title}</div>
+              <div style={{ ...styles.list, ...{ flex: 1 } }}>
+                x {item.quantity}
               </div>
-            ))}
-          </div>
-          <div style={styles.footer}>
-            Total Purchase: £{totalPrice.toFixed(2)}
-          </div>
+              <div style={styles.list}>£{item.price}</div>
+            </div>
+          ))}
+        </div>
+        <div style={styles.footer}>
+          Total Purchase: £{totalPrice.toFixed(2)}
         </div>
       </div>
     </div>
@@ -32,34 +30,16 @@ export default function PrintReceiptScreen() {
 }
 
 const styles = {
-  backGround: {
-    position: 'absolute',
-    width: '100%',
-    height: '100%',
-    backgroundColor: colors.white,
-    opacity: '0.8',
-  },
   container: {
-    position: 'absolute',
     display: 'grid',
-    width: '100vw',
-    height: '100vh',
     justifyContent: 'center',
-    alignItems: 'center',
-  },
-  receipt: {
-    display: 'flex',
-    flexDirection: 'column',
-    // justifyContent: 'center',
-    // flex: 1,
-    width: '60vw',
-    height: '60vh',
-    maxWidth: 400,
-    maxHeight: 800,
+    gridTemplateAreas: "'a a a''b b b''c c c'",
+    gridTemplateRows: '150px auto 100px',
+    width: '100%',
     overflow: 'scroll',
-    backgroundColor: colors.light,
   },
   header: {
+    gridArea: 'a',
     display: 'grid',
     justifyContent: 'center',
     color: colors.dark,
@@ -68,6 +48,7 @@ const styles = {
     margin: 20,
   },
   wrapper: {
+    gridArea: 'b',
     fontSize: 18,
     fontWeight: 600,
     flex: 1,
@@ -82,6 +63,7 @@ const styles = {
     marginRight: 10,
   },
   footer: {
+    gridArea: 'c',
     display: 'grid',
     justifyContent: 'center',
     color: colors.dark,

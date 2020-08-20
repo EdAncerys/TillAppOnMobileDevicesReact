@@ -36,6 +36,7 @@ const styles = {
     display: 'grid',
     gridTemplateAreas: "'c a b ''d d d'",
     backgroundColor: colors.light,
+    width: '100vw',
     height: '100%',
   },
 };

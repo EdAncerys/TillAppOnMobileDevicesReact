@@ -33,21 +33,22 @@ export default function AppMenu() {
       }}
     >
       {printReceipt && <PrintReceiptScreen />}
-
-      <div style={styles.container}>
-        <div style={styles.headerMenu}>
-          <TillAppHeaderMenu />
+      {!printReceipt && (
+        <div style={styles.container}>
+          <div style={styles.headerMenu}>
+            <TillAppHeaderMenu />
+          </div>
+          <div style={styles.sideMenu}>
+            <TillAppSideMenu />
+          </div>
+          <div style={styles.mainMenu}>
+            <TillAppMenu />
+          </div>
+          <div style={styles.footerMenu}>
+            <TillAppFooterMenu />
+          </div>
         </div>
-        <div style={styles.sideMenu}>
-          <TillAppSideMenu />
-        </div>
-        <div style={styles.mainMenu}>
-          <TillAppMenu />
-        </div>
-        <div style={styles.footerMenu}>
-          <TillAppFooterMenu />
-        </div>
-      </div>
+      )}
     </TillAppContext.Provider>
   );
 }
