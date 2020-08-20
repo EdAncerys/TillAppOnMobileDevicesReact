@@ -27,6 +27,11 @@ export default function FrontPage() {
           <TillApp />
         </DeviceScreen>
       </div>
+      <div style={{ gridArea: 'e' }}>
+        <DeviceScreen width={450} height={600} title="Surface Duo">
+          <TillApp />
+        </DeviceScreen>
+      </div>
     </div>
   );
 }
@@ -34,7 +39,7 @@ export default function FrontPage() {
 const styles = {
   container: {
     display: 'grid',
-    gridTemplateAreas: "'c a b ''d d d'",
+    gridTemplateAreas: "'c a b ''d d e'",
     backgroundColor: colors.light,
     width: '100vw',
     height: '100%',

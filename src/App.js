@@ -3,7 +3,6 @@ import './config/App.css';
 import './config/FontAwesome';
 
 import FrontPage from './Pages/FrontPage';
-import TillApp from './Components/TillApp/TillApp';
 
 export default function App() {
   return (

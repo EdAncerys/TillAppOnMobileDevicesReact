@@ -1,5 +1,7 @@
 import React, { useContext } from 'react';
 import { TillAppContext } from '../TillAppContext';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import colors from '../../../config/colors';
 
 export default function PrintReceiptScreen() {
@@ -7,9 +9,17 @@ export default function PrintReceiptScreen() {
 
   return (
     <div>
-      <div style={styles.backGround}> </div>
       <div style={styles.container}>
-        <div style={styles.header}>Receipt</div>
+        <div style={styles.header}>
+          Receipt{' '}
+          <FontAwesomeIcon
+            style={{ marginLeft: 20 }}
+            icon="spinner"
+            spin
+            size="x"
+          />
+        </div>
+
         <div style={styles.wrapper}>
           {selectedItems.map((item) => (
             <div style={styles.itemList} key={item.id}>
@@ -33,31 +43,30 @@ const styles = {
   container: {
     display: 'grid',
     justifyContent: 'center',
-    gridTemplateAreas: "'a a a''b b b''c c c'",
-    gridTemplateRows: '150px auto 100px',
-    width: '100%',
+    gridTemplateAreas: "'a''b''c'",
+    gridTemplateRows: '100px 80% 80%',
+    minHeight: 300,
     overflow: 'scroll',
   },
   header: {
     gridArea: 'a',
-    display: 'grid',
+    display: 'flex',
     justifyContent: 'center',
     color: colors.dark,
     fontSize: 24,
-    fontWeight: 600,
     margin: 20,
   },
   wrapper: {
     gridArea: 'b',
     fontSize: 18,
     fontWeight: 600,
-    flex: 1,
     marginRight: 20,
     marginLeft: 20,
     overflow: 'scroll',
   },
   itemList: {
     display: 'flex',
+    marginTop: 10,
   },
   list: {
     marginRight: 10,
@@ -69,6 +78,7 @@ const styles = {
     color: colors.dark,
     fontSize: 20,
     fontWeight: 600,
-    margin: 20,
+    width: 300,
+    marginTop: 40,
   },
 };

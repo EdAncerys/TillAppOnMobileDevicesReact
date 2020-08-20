@@ -28,6 +28,8 @@ import {
   faShoePrints,
   faMitten,
   faHatWizard,
+  faSpinner,
+  faSync,
 } from '@fortawesome/free-solid-svg-icons';
 
 library.add(
@@ -58,5 +60,7 @@ library.add(
   faSocks,
   faShoePrints,
   faMitten,
-  faHatWizard
+  faHatWizard,
+  faSpinner,
+  faSync
 );

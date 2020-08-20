@@ -52,6 +52,7 @@ const styles = {
     marginLeft: 10,
     marginRight: 10,
     height: 80,
+    minWidth: 180,
     flex: 1,
     overflow: 'scroll',
   },

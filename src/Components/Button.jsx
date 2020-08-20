@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BsArrowRepeat } from 'react-icons/bs';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import colors from '../config/colors';
 
@@ -28,7 +28,14 @@ export default function Button({
     >
       <div style={styles.container}>
         <p style={styles.text}>{title}</p>
-        {icon && <BsArrowRepeat size={30} />}
+        {icon && (
+          <FontAwesomeIcon
+            style={{ marginLeft: 20 }}
+            icon="sync"
+            spin
+            size="2x"
+          />
+        )}
       </div>
     </div>
   );

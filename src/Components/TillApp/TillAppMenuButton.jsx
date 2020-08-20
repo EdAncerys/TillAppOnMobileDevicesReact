@@ -61,7 +61,7 @@ export default function TillAppMenuButton({
         display: 'grid',
         width: width,
         height: height,
-        borderRadius: width / 4,
+        borderRadius: width / 3,
         backgroundColor: hover ? colors.medium : buttonColor,
         padding: 5,
         margin: 20,
