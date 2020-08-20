@@ -13,18 +13,18 @@ export default function FrontPage() {
         </DeviceScreen>
       </div>
       <div style={{ gridArea: 'b' }}>
-        <DeviceScreen width={375} height={667}>
-          <p>iPhone 8</p>
+        <DeviceScreen width={375} height={667} title="iPhone 8">
+          <TillApp />
         </DeviceScreen>
       </div>
       <div style={{ gridArea: 'c' }}>
-        <DeviceScreen width={320} height={568}>
-          <p>iPhone SE</p>
+        <DeviceScreen width={320} height={568} title="iPhone SE">
+          <TillApp />
         </DeviceScreen>
       </div>
       <div style={{ gridArea: 'd' }}>
-        <DeviceScreen width={768} height={1024}>
-          <p>iPad</p>
+        <DeviceScreen width={768} height={1024} title="iPad">
+          <TillApp />
         </DeviceScreen>
       </div>
     </div>
