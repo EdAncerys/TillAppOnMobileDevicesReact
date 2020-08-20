@@ -18,6 +18,7 @@ export default function TillAppSideMenu() {
       <div style={styles.mainMenu}>
         {selectedItems.map((item) => (
           <TillAppTextPrint
+            key={item.id}
             title={item.title}
             quantity={item.quantity}
             price={item.price}

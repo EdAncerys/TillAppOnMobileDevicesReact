@@ -13,7 +13,7 @@ export default function PrintReceiptScreen() {
           <div style={styles.header}>Receipt</div>
           <div style={styles.wrapper}>
             {selectedItems.map((item) => (
-              <div style={styles.itemList}>
+              <div style={styles.itemList} key={item.id}>
                 <div style={styles.list}>{item.title}</div>
                 <div style={{ ...styles.list, ...{ flex: 1 } }}>
                   x {item.quantity}
