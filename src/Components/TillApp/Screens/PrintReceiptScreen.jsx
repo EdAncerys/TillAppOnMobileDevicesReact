@@ -7,7 +7,7 @@ export default function PrintReceiptScreen() {
 
   return (
     <div>
-      {/* <div style={styles.backGround}> </div> */}
+      <div style={styles.backGround}> </div>
       <div style={styles.container}>
         <div style={styles.receipt}>
           <div style={styles.header}>Receipt</div>
@@ -32,6 +32,13 @@ export default function PrintReceiptScreen() {
 }
 
 const styles = {
+  backGround: {
+    position: 'absolute',
+    width: '100%',
+    height: '100%',
+    backgroundColor: colors.white,
+    opacity: '0.8',
+  },
   container: {
     position: 'absolute',
     display: 'grid',
@@ -39,8 +46,6 @@ const styles = {
     height: '100vh',
     justifyContent: 'center',
     alignItems: 'center',
-    // backgroundColor: colors.white,
-    // opacity: '0.8',
   },
   receipt: {
     display: 'flex',
