@@ -50,7 +50,8 @@ const styles = {
   receipt: {
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'center',
+    // justifyContent: 'center',
+    // flex: 1,
     width: '60vw',
     height: '60vh',
     maxWidth: 400,
@@ -67,7 +68,6 @@ const styles = {
     margin: 20,
   },
   wrapper: {
-    display: 'grid',
     fontSize: 18,
     fontWeight: 600,
     flex: 1,

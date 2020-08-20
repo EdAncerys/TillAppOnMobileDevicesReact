@@ -14,7 +14,6 @@ import {
   faLemon,
   faPizzaSlice,
   faCoffee,
-  faBone,
   faGlassMartini,
   faBeer,
   faCocktail,
